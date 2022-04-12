@@ -30,10 +30,6 @@
   --gray10: #616161;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   color: var(--gray30);
   font-family: 'Roboto', sans-serif;
@@ -47,13 +43,9 @@ color: var(--gray30);
 
 header {
   /* --gray10: red; */
-  font-size: 14px ;  
-  width: 188px;
+  font-size: 14px ; 
   color: var(--gray10);
-  position: absolute;
-  top: 64px;
-  left: -232px;
-  z-index: 1;
+  
 }
 
 header a {
@@ -67,16 +59,10 @@ header a:hover {
 
 nav details summary {
   font-weight: bold;
-  line-height: 24px;
-}
-
-header li {
-  margin-bottom: 16px;
 }
 
 h1 {
   font-size: 60px;
-  font-weight: normal;
   margin-top: 64px;
   margin-bottom: 16px;
 }
@@ -100,9 +86,6 @@ h3 {
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
-  position: relative;
-  top: 0;
-  background: white;
 }
 
 pre {
@@ -128,25 +111,8 @@ blockquote span::before {
   content: '-';
 }
 
-.header {
-  position: sticky;
-  top: 0 ;
-}
+.main {
 
-.header-content {
-  position: relative;
-}
-
-/* .main {
-} */
-
-.wrapper {
-  width: 902px;
-  margin: auto;
-}
-
-.main-content {
-  background: white;
 }
 
 /* .debug {
@@ -158,7 +124,7 @@ blockquote span::before {
 } */
 
 .hero {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url( '../images/pattern.png');
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');
   background-size: 15%;
   height: 350px;
 }
@@ -166,15 +132,6 @@ blockquote span::before {
 /* ::selection {
   background: blueviolet;
 } */
-
-.section-content {
-  margin-top: 164px;
-  position: relative;
-}
-
-.section-content:first-of-type {
-  margin: 0;
-}
 
 .section-content ol li {
    line-height: 24px;
@@ -195,11 +152,16 @@ blockquote span::before {
 
 .section-content {
   counter-reset: titleList;
+  margin-top: 164px ;
+}
+
+.section-content:first-of-type {
+  margin: 0;
 }
 
 .section-content h3 {
   counter-increment: titleList;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 .section-content h3::before {
@@ -212,7 +174,4 @@ blockquote span::before {
   height: 4px;
   background:#424242;
   display: inline-block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
