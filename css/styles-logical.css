@@ -46,9 +46,6 @@ a {
 color: var(--white30);
 }
 
-/* .header {
-} */
-
 .header-content {
   padding-inline: 20px;
 }
@@ -63,7 +60,6 @@ header li {
   color: var(--white20);
   margin-block-end: 16px;
   /* margin-bottom: 16px; */
-
 }
 
 header a {
@@ -163,6 +159,7 @@ p {
   display: inline-block;
 }
  */
+ 
 blockquote {
   margin-block-start: 80px;
   margin-block-end: 63px;
@@ -189,9 +186,6 @@ blockquote p {
 .main-content {
   padding-inline: 16px;
 }
-
-/* .slider {
-} */
 
 .slider-container {
   display: block;

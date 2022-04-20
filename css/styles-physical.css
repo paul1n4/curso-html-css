@@ -46,15 +46,18 @@ a {
 color: var(--gray30);
 }
 
+.header-content {
+  padding-left: 20px;
+}
+
 header {
-  /* --gray10: red; */
+  margin-top: 20px;
   font-size: 14px ;  
-  width: 188px;
   color: var(--gray10);
-  position: absolute;
-  top: 64px;
-  left: -232px;
-  z-index: 1;
+}
+
+header li {
+  margin-bottom: 16px;
 }
 
 header a {
@@ -104,24 +107,16 @@ nav details summary {
   line-height: 24px;
 }
 
-header li {
-  margin-bottom: 16px;
-}
-
 h1 {
-  font-size: 60px;
+  font-size: 24px;
   font-weight: normal;
-  margin-top: 64px;
+  margin-top: 20px;
   margin-bottom: 16px;
 }
 
 /* h1 + p {
   margin-bottom: 64px ;
 } */
-
-hr {
-  margin: 64px 0;
-}
 
 h2 {
   font-size: 2em;
@@ -137,7 +132,18 @@ h3 {
   font-weight: normal;
   position: relative;
   top: 0;
-  background: white;
+}
+
+hr {
+  margin: 64px 0;
+}
+
+pre {
+  background: #FEC62E;
+  padding: 40px;
+  overflow: auto;
+  font-family: 'Roboto', sans-serif;
+  line-height: 24px ;
 }
 
 p {
@@ -145,11 +151,10 @@ p {
   line-height: 24px;
 }
 
-pre {
-  background: #FEC62E;
-  padding: 40px;
-  font-family: 'Roboto', sans-serif;
-  line-height: 24px ;
+.hero {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url( '../images/pattern.png');
+  background-size: 15%;
+  height: 96px;
 }
 
 blockquote {
@@ -157,8 +162,11 @@ blockquote {
   color: #424242;
   margin: 32px 0; 
   padding-left: 16px;
-  line-height: 32px;
   border-left: 4px solid var(--gray30 );
+}
+
+blockquote p {
+  line-height: 32px;
 }
 
 blockquote span {
@@ -169,25 +177,13 @@ blockquote span::before {
   content: '-';
 }
 
-.header {
-  position: sticky;
-  top: 0 ;
-}
-
-.header-content {
-  position: relative;
-}
-
-/* .main {
-} */
-
 .wrapper {
-  width: 902px;
+  max-width: 902px;
   margin: auto;
 }
 
 .main-content {
-  background: white;
+  padding-inline: 16px;
 }
 
 /* .debug {
@@ -197,25 +193,10 @@ blockquote span::before {
   border: 1px solid red !important;
   box-sizing: border-box;
 } */
-
-.hero {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url( '../images/pattern.png');
-  background-size: 15%;
-  height: 350px;
-}
  
 /* ::selection {
   background: blueviolet;
 } */
-
-.essential {
-  background: red;
-}
-
-.section-content {
-  margin-top: 164px;
-  position: relative;
-}
 
 .section-content:first-of-type {
   margin: 0;
@@ -224,6 +205,17 @@ blockquote span::before {
 .section-content:first-of-type img{
   margin-top: 40px;
   display: block;
+}
+
+.section-content img {
+  display: block;
+  max-width: 100%;
+}
+
+.section-content {
+  margin-top: 164px;
+  position: relative;
+  counter-reset: titleList;
 }
 
 .section-content ol li {
@@ -245,10 +237,6 @@ blockquote span::before {
 
 .section-content:nth-of-type(3) h3{
   margin-top: 40px;
-}
-
-.section-content {
-  counter-reset: titleList;
 }
 
 .section-content h3 {
@@ -315,11 +303,16 @@ blockquote span::before {
   border-radius: 90px;
   font-size: 16px;
   padding: 12px 16px;
+  display: block;
+}
+
+.form input[type="text"]{
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .form input[type="email"]{
-  width: 40%;
-  position: relative;
+  width: 100%;
 }
 
 .form input[type="submit"] {
@@ -327,13 +320,13 @@ blockquote span::before {
   color: white;
   position: absolute;
   right: 0;
+  top: 0;
   border: 1px solid black;
-
 }
 
 .form label {
+  display: block;
   position: relative;
-  padding: 12px 16px;
 }
 
 footer {
@@ -348,7 +341,6 @@ footer {
   align-content: center;
 }
 
-
 footer p {
   color: white;
   text-align: center;
@@ -361,4 +353,72 @@ footer p {
 .social img{
   text-align: center;
   padding-right: 16px;
+}
+
+@media screen and (min-width: 1366px){
+  .hero{
+    height: 350px;
+  }
+  
+  .header {
+    position: sticky;
+    top: -45px ;
+  }
+
+  .header-content {
+    position: relative;
+  }
+
+  header {
+    font-size: 14px ;  
+    width: 188px;
+    color: var(--gray10);
+    position: absolute;
+    top: 64px;
+    left: -232px;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: normal;
+    margin-top: 64px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .form input {
+    border: 1px solid var(--gray10);
+    box-sizing: border-box;
+    border-radius: 90px;
+    font-size: 16px;
+    padding: 12px 16px;
+    display: inline-block;
+  }
+  
+  .form input[type="text"]{
+    width: 40%;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+  
+  .form input[type="email"]{
+    width: 100%;
+  }
+  
+  .form input[type="submit"] {
+    background: black;
+    color: white;
+    position: absolute;
+    right: 0;
+    border: 1px solid black;
+  }
+  
+  .form label {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+  }
+  
 }
