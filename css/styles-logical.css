@@ -36,9 +36,10 @@ html {
 
 body {
   color: var(--white30);
-  font-family: 'Nunito ', sans-serif;
+  font-family: 'Nunito', sans-serif;
   background: #251F24;
   margin: 0;
+  font-size: 17px;
   /* font-family: 'charter'; */
 }
 
@@ -71,9 +72,38 @@ header a:hover {
   color: var(--white30);
 }
 
+nav {
+  margin-bottom: 40px;
+}
+
 nav details summary {
   font-weight: bold;
   line-height: 24px;
+}
+
+nav h2 {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.nav-variante {
+  padding: 0 8px;
+  margin: 0;
+}
+
+.nav-variante li {
+  list-style: none;
+}
+
+.nav-variante a:hover {
+  color: white;
+  background: black;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-right: 90px;
+  padding-bottom: 8px;
+  padding-left: 8px;
 }
 
 h1 {
@@ -83,13 +113,13 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 40px;
   margin-block: 40px;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 32px;
   font-weight: 600;
   margin-block: 16px;
 }
@@ -103,6 +133,7 @@ pre {
   background: var(--white10);
   padding: 40px;
   overflow: auto;
+  scrollbar-color: #251F24 red;
   border-radius: 8px;
   border: 10px solid #5551FF;
   box-shadow: -10px 10px 0 0 #ABAAF6;
@@ -132,37 +163,68 @@ p {
   background: blueviolet;
 } */
 
+.section-content {
+  margin-block-start: 130px;
+  counter-reset: titleList;
+}
+
+.section-content:first-of-type {
+  margin-block-start: 0;
+}
+
 .section-content img {
-  margin-block-start: 40px;
   display: block;
   /* max-width: 100%; propiedad física*/
   max-inline-size: 100%;
 }
 
-.section-content {
-  counter-reset: titleList;
+.section-content ol li {
+  line-height: 24px;
+  color: var(--white20);
+}
+
+.section-content ul li {
+  margin-bottom: 16px;
+  color: var(--white20);
+}
+
+.section-content:first-of-type img{
+  margin-block-start: 40px;
+  display: block;
+}
+
+/* con el + es un hermano directo */
+.section-content + hr {
+  display: none;
 }
 
 .section-content h3 {
   counter-increment: titleList;
+  margin-block-start: 40px;
 }
 
-.section-content h3::before {
+.section-content:first-of-type h3 {
+  margin-block-start: 16px;
+}
+
+.setup h3::before {
   content: counter(titleList, decimal) '. ';
 }
 
-/* .section-content h3::after {
-  content: '';
-  width: 80px;
-  height: 4px;
-  background: var(--white30);
-  display: inline-block;
+
+.section-slider {
+  margin-top: 40px;
 }
- */
+
+.section-slider p{
+  margin: 40px 0;
+}
+
  
 blockquote {
   margin-block-start: 80px;
   margin-block-end: 63px;
+  margin-inline: 0;
   background-color: var(--white10);
   border-radius: 8px;
   line-height: 32px;
@@ -174,12 +236,12 @@ blockquote p {
   color: var(--white30 );
 }
 
-.main hr {
-  display: none;
+blockquote span::before {
+  content: '-';
 }
 
 .wrapper {
-  max-inline-size: 902px;
+  max-inline-size: 736px;
   margin: auto;
 }
 
@@ -240,6 +302,33 @@ blockquote p {
   color: var(--white20);
 }
 
+footer {
+  background: var(--white30);
+  height: 176px;
+  margin-block-start: 90px;
+}
+
+.footer-content{
+  height: 177px;
+  display: grid;
+  align-content: center;
+}
+
+footer p {
+  color: #251F24;
+  text-align: center;
+  margin-top: 0;
+}
+
+.social{
+  text-align: center;
+}
+
+.social img{
+  text-align: center;
+  padding-right: 16px;
+}
+
 @media screen and (min-width: 1366px) {
   .hero {
     block-size: 350px; /* Propiedad lógica */
@@ -268,3 +357,4 @@ blockquote p {
     margin-block-start: 64px;
   } 
 }
+

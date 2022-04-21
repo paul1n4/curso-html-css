@@ -198,6 +198,12 @@ blockquote span::before {
   background: blueviolet;
 } */
 
+.section-content {
+  margin-top: 164px;
+  position: relative;
+  counter-reset: titleList;
+}
+
 .section-content:first-of-type {
   margin: 0;
 }
@@ -210,12 +216,6 @@ blockquote span::before {
 .section-content img {
   display: block;
   max-width: 100%;
-}
-
-.section-content {
-  margin-top: 164px;
-  position: relative;
-  counter-reset: titleList;
 }
 
 .section-content ol li {
@@ -350,6 +350,7 @@ footer p {
 .social{
   text-align: center;
 }
+
 .social img{
   text-align: center;
   padding-right: 16px;
