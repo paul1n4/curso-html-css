@@ -73,7 +73,7 @@ header a:hover {
 }
 
 nav {
-  margin-bottom: 40px;
+  margin-block-end: 40px;
 }
 
 nav details summary {
@@ -84,7 +84,7 @@ nav details summary {
 nav h2 {
   font-size: 14px;
   margin: 0;
-  margin-bottom: 16px;
+  margin-block-end: 16px;
 }
 
 .nav-variante {
@@ -100,10 +100,10 @@ nav h2 {
   color: white;
   background: black;
   border-radius: 4px;
-  padding-top: 8px;
-  padding-right: 90px;
-  padding-bottom: 8px;
-  padding-left: 8px;
+  padding-block-start: 8px;
+  padding-inline-end: 90px;
+  padding-block-end: 8px;
+  padding-inline-start: 8px;
 }
 
 h1 {
@@ -181,11 +181,17 @@ p {
 .section-content ol li {
   line-height: 24px;
   color: var(--white20);
+  font-weight: bold;
 }
 
 .section-content ul li {
   margin-bottom: 16px;
   color: var(--white20);
+  font-weight: bold;
+}
+
+.section-content ul li::marker {
+  color: var(--white30);
 }
 
 .section-content:first-of-type img{
@@ -216,8 +222,12 @@ p {
   margin-top: 40px;
 }
 
-.section-slider p{
+.section-slider p {
   margin: 40px 0;
+}
+
+.section-slider a {
+  color: #157EFB;
 }
 
  
@@ -261,8 +271,8 @@ blockquote span::before {
 .video {
   margin: 0;
   display: inline-block;
-  width: 100%;
-  height: auto;
+  inline-size: 100%;
+  block-size: auto;
   aspect-ratio: 16/9; 
 }
 
@@ -280,7 +290,7 @@ blockquote span::before {
 }
 
 .form input {
-  width: 100%;
+  inline-size: 100%;
   border: 1px solid var(--white30);
   background: #251F24;
   box-sizing: border-box;
@@ -304,12 +314,12 @@ blockquote span::before {
 
 footer {
   background: var(--white30);
-  height: 176px;
   margin-block-start: 90px;
 }
 
 .footer-content{
-  height: 177px;
+  block-size: 177px;
+  /* height: 177px; */
   display: grid;
   align-content: center;
 }
@@ -317,7 +327,7 @@ footer {
 footer p {
   color: #251F24;
   text-align: center;
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .social{
@@ -326,7 +336,7 @@ footer p {
 
 .social img{
   text-align: center;
-  padding-right: 16px;
+  padding-inline-end: 16px;
 }
 
 @media screen and (min-width: 1366px) {
@@ -356,5 +366,17 @@ footer p {
     font-size: 60px;
     margin-block-start: 64px;
   } 
+  .section-content ol li {
+    font-weight: normal;
+  }
+}
+
+@media screen and (min-width: 650px){
+  .section-content ol li {
+    font-weight: normal;
+  }
+  .section-content ul li {
+    font-weight: normal;
+  }
 }
 
