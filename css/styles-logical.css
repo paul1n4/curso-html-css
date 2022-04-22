@@ -306,6 +306,7 @@ blockquote span::before {
 .form input[type="submit"] {
   background: #157EFB;
   border: none;
+  padding-block: 12px;
 }
 
 .form input::-webkit-input-placeholder{
