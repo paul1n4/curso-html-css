@@ -322,6 +322,7 @@ blockquote span::before {
   right: 0;
   top: 0;
   bottom: 0;
+  height: 100%;
   border: 1px solid black;
 }
 
