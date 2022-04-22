@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/styles-nemium-c.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
     <title>El Blog de Pau</title>
     <meta property="og:title" content="Curso de html y css" />
@@ -35,14 +35,16 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <div class="hero"></div>
-    <div class="header">
+    <header>
+      <h1>Curso esencial de HTML y CSS</h1>
+      <p>Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML y CSS para la creación de contenidos, en el nivel 2 aprenderás de componentes y en 3 sobre layouts.</p>
+    </header>
+    <div class="menu">
       <div class="wrapper">
-        <div class="header-content">
-          <header>
-            <nav>
+        <div class="menu-content">
+            <nav class="nav-variante">
               <h2>VARIANTES DEL PROYECTO</h2>
-              <ol class="nav-variante">
+              <ol>
                 <li><a href="./index.html">Nemium A</a></li>
                 <li><a href="./nemium-b.html">Nemium B</a></li>
                 <li><a href="./nemium-c.html">Nemium C</a></li>
@@ -52,47 +54,40 @@
             </nav>
             <nav>
               <h2>CONTENIDO</h2>
-              <details open>
-                <summary> 
-                  Setup
-                </summary>
-                <ol> 
-                  <li>
-                    <a href="#google-chrome">Google Chrome</a>
-                  </li>
-                  <li>
-                    <a href="#vsc">Visual Studio Code</a>
-                  </li>
-                  <li>
-                    <a href="#figma">Figma</a>
-                  </li>
-                  <li>
-                    <a href="#github">GitHub</a>
-                  </li>
-                </ol>
-              </details>
-      
-              <details open>
-                <summary>Conceptos esenciales del Desarrollo Web</summary>
-                <ol>
-                  <li><a href="#html">Qué es HTML</a></li>
-                  <li><a href="#etiquetas">Etiquetas</a></li>
-                  <li><a href="#dom">DOM</a></li>
-                  <li><a href="#semantica">Semántica</a></li>
-                  <li><a href="#atributos">Atributos</a></li>
-                  <li><a href="#css">Qué es CSS</a></li>
-              </details>
+              <div class="nav-contenido">
+                <h3>Setup</h3>    
+                  <ol> 
+                    <li>
+                      <a href="#google-chrome">Google Chrome</a>
+                    </li>
+                    <li>
+                      <a href="#vsc">Visual Studio Code</a>
+                    </li>
+                    <li>
+                      <a href="#figma">Figma</a>
+                    </li>
+                    <li>
+                      <a href="#github">GitHub</a>
+                    </li>
+                  </ol>
+        
+                  <h3>Conceptos esenciales del Desarrollo Web</h3>
+                  <ol>
+                    <li><a href="#html">Qué es HTML</a></li>
+                    <li><a href="#etiquetas">Etiquetas</a></li>
+                    <li><a href="#dom">DOM</a></li>
+                    <li><a href="#semantica">Semántica</a></li>
+                    <li><a href="#atributos">Atributos</a></li>
+                    <li><a href="#css">Qué es CSS</a></li>
+                  </ol>
+              </div>
             </nav>
-          </header>
         </div>
       </div>
     </div>
     <main class="main">
       <div class="wrapper">
          <div class="main-content">
-          <h1>Curso esencial de HTML y CSS</h1>
-          <p>Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML y CSS para la creación de contenidos, en el nivel 2 aprenderás de componentes y en 3 sobre layouts.</p>
-          <hr>
           <section class="section-content">
             <h2>
               Setup

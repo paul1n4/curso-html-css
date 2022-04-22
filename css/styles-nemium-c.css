@@ -39,34 +39,42 @@ body {
   color: var(--gray30);
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  /* font-family: 'charter'; */
 }
 
 a {
 color: var(--gray30);
 }
 
-.header-content {
-  padding-left: 20px;
+header {
+  padding-inline: 16px;
 }
 
-header {
+header p {
+  color: var(--gray30);
+}
+
+.menu {
   margin-top: 20px;
   font-size: 14px ;  
   color: var(--gray10);
 }
 
-header li {
+.menu li {
   margin-bottom: 16px;
 }
 
-header a {
+.menu a {
   color: var(--gray10);
   text-decoration: none;
+  font-weight: 500;
 }
 
-header a:hover {
+.menu a:hover {
   color: var(--gray30);
+}
+
+.menu-content {
+  padding-inline: 16px;
 }
 
 .nav-variante {
@@ -78,21 +86,30 @@ header a:hover {
   list-style: none;
 }
 
+.nav-variante ol {
+  padding-left: 0px;
+}
+
+.nav-variante a {
+  padding-right: 90px;
+  padding-left: 8px;
+}
+
 .nav-variante a:hover {
   color: white;
   background: black;
   border-radius: 4px;
   padding-top: 8px;
-  padding-right: 90px;
+  padding-right: 70%;
   padding-bottom: 8px;
   padding-left: 8px;
 }
 
 nav {
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
-nav ol {
+.nav-contenido ol {
   padding-left: 20px;
 }
 
@@ -102,21 +119,24 @@ nav h2 {
   margin-bottom: 16px;
 }
 
-nav details summary {
+nav h3 {
+  font-size: 14px;
   font-weight: bold;
   line-height: 24px;
 }
 
-h1 {
-  font-size: 24px;
-  font-weight: normal;
-  margin-top: 20px;
-  margin-bottom: 16px;
+.nav-contenido {
+  border-left: 4px solid #C4C4C4;
+  padding-left: 16px;
 }
 
-/* h1 + p {
-  margin-bottom: 64px ;
-} */
+h1 {
+  font-size: 2em;
+  color: var(--gray30);
+  font-weight: normal;
+  line-height: 37.5px;
+  margin: 40px 0 16px;
+}
 
 h2 {
   font-size: 2em;
@@ -359,27 +379,18 @@ footer p {
 }
 
 @media screen and (min-width: 1366px){
-  .hero{
-    height: 350px;
-  }
+  
   
   .header {
-    position: sticky;
-    top: -45px ;
+    
   }
 
   .header-content {
-    position: relative;
   }
 
   header {
     font-size: 14px ;  
-    width: 188px;
     color: var(--gray10);
-    position: absolute;
-    top: 64px;
-    left: -232px;
-    z-index: 1;
   }
 
   h1 {
