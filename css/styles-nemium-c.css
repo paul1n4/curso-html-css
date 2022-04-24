@@ -47,6 +47,8 @@ color: var(--gray30);
 
 header {
   padding-inline: 16px;
+  max-width: 966px;
+  margin: auto;
 }
 
 header p {
@@ -67,7 +69,6 @@ header p {
 .menu a {
   color: var(--gray10);
   text-decoration: none;
-  font-weight: 500;
 }
 
 .menu a:hover {
@@ -94,6 +95,7 @@ header p {
 .nav-variante a {
   padding-right: 90px;
   padding-left: 8px;
+  font-weight: 500;
 }
 
 .nav-variante a:hover {
@@ -198,7 +200,7 @@ blockquote span::before {
 }
 
 .wrapper {
-  max-width: 902px;
+  max-width: 966px;
   margin: auto;
 }
 
@@ -361,22 +363,57 @@ footer p {
     font-size: 14px ;  
     color: var(--gray10);
   }
-
-  h1 {
-    font-size: 60px;
-    font-weight: normal;
-    margin-top: 64px;
-    margin-bottom: 16px;
-  }
 }
 
 @media screen and (min-width: 750px) {
+  .menu {
+    margin-top: 64px;
+  }
+
+  h1 {
+    font-size: 60px;
+    line-height: 70.31px;
+    margin-top: 64px;
+    margin-bottom: 16px;
+  }
+
+  header p{
+    margin-bottom: 0;
+  }
+
+  nav {
+    margin-top: 104px;
+  }
+
+  .nav-variante a:hover {
+    padding-right: 206px;
+  }
+
+  .nav-contenido ol {
+    margin-top: 16px;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }  
+
+  blockquote {
+    margin: 80px 0; 
+  }
+
+  .section-content:nth-of-type(2) h3 {
+    margin-top: 40px;
+  }
+
+  .section-content:nth-of-type(3) h3 {
+    margin-top: 40px;
+  }
+
+  .section-slider {
+    margin-top: 40px;
+  }
+
   .form input {
-    border: 1px solid var(--gray10);
-    box-sizing: border-box;
-    border-radius: 90px;
-    font-size: 16px;
-    padding: 12px 16px;
     display: inline-block;
   }
   
@@ -390,18 +427,13 @@ footer p {
     width: 100%;
   }
   
-  .form input[type="submit"] {
-    background: black;
-    color: white;
-    position: absolute;
-    right: 0;
-    border: 1px solid black;
-  }
-  
   .form label {
     position: relative;
     display: inline-block;
     width: 50%;
+  }
+  footer {
+    margin-top: 80px;
   }
   
 }

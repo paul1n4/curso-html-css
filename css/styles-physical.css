@@ -81,6 +81,7 @@ header a:hover {
 .nav-variante a {
   padding-right: 90px;
   padding-left: 8px;
+  font-weight: 500;
 }
 
 .nav-variante a:hover {
