@@ -359,6 +359,10 @@ footer p {
 }
 
 @media screen and (min-width: 650px){
+  .nav-variante a:hover {
+    padding-inline-end: 40%;
+  }
+
   .section-content ol li {
     font-weight: normal;
   }
