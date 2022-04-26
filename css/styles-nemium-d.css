@@ -319,7 +319,7 @@ blockquote span::before {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: #424242;
+  background: #5551FF;
   border-radius: 50%;
 }
 
@@ -409,16 +409,37 @@ footer p {
     z-index: 1;
   }
 
+  hr {
+    margin: 64px 0;
+  }
+
   h1 {
     font-size: 60px;
     margin-top: 64px;
     margin-bottom: 16px;
+  }
+
+  .blockquote-content {
+    margin: 64px 0;
+  }
+
+  blockquote {
+    margin: 0;
+    display: inline-block;
+  }
+
+  footer {
+    margin-top: 113px;
   }
 }
 
 @media screen and (min-width: 750px) {
   .nav-variante a:hover {
     padding-right: 50%;
+  }
+
+  .nav-contenido a:hover {
+    padding-right: 10%;
   }
 
   .form input {
@@ -441,11 +462,9 @@ footer p {
   }
   
   .form input[type="submit"] {
-    background: black;
     color: white;
     position: absolute;
     right: 0;
-    border: 1px solid black;
   }
   
   .form label {
