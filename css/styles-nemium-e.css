@@ -334,12 +334,11 @@ footer p {
 
   .header {
     position: sticky;
-    inset-block-start: -45px;
+    inset-block-start: 0;
   }
   
   .header-content {
     position: relative;
-    inset-block-start: 65px;
     padding-inline: 0;
   }
   
